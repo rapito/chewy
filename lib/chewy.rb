@@ -195,6 +195,7 @@ module Chewy
     #   city3.do_update! # index updated again
     #
     def strategy(name = nil, &block)
+      byebug
       Thread.current[:chewy_strategy] ||= Chewy::Strategy.new
       if name
         if block
